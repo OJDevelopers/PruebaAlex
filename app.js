@@ -168,7 +168,7 @@ app.use('/api', states);
 app.use('/api', products);
 app.use('/api', orders);*/
 
-var Port = 3350;//process.env.PORT || 8888;
+var Port = process.env.PORT || 8888;
 app.listen(Port, function() {
   console.log("Node server running on http://localhost:"+Port+". Server Alex With MongoDB");
 });
