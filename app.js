@@ -63,6 +63,9 @@ usersr.route('/usuarios/:cedula')
   .get(UsersCtrl.findUserById)
   .put(UsersCtrl.updateUser)
   .delete(UsersCtrl.deleteUser);
+
+usersr.route('/usuariosxUsNa/:username')
+  .get(UsersCtrl.findUsersUsername);
 //----------Fin rutas Users-------------------//
 
 

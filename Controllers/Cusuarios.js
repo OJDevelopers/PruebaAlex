@@ -25,6 +25,20 @@ var Users = mongoose.model('usuario');
     });
   };
 
+  //por username y pass
+
+    exports.findUsersUsername = function(req, res) {
+    console.log(Users);
+    Users.find({"Login.username":req.params.username},function(err, users) {
+      console.log(users);
+      if(!err) {
+        res.send(users);
+      } else {
+        console.log('ERROR: ' + err);
+      }
+    });
+  };
+
   //POST - Insert a new User in the DB
   exports.addUser = function(req, res) {
     console.log('POST');
@@ -101,4 +115,6 @@ var Users = mongoose.model('usuario');
         }
       })
     });
+
+
   }
