@@ -26,7 +26,7 @@ var Users = mongoose.model('usuario');
   };
 
   //por username y pass
-
+/*
     exports.findUsersUsername = function(req, res) {
     console.log(Users);
     Users.find({"Login.username":req.params.username},function(err, users) {
@@ -37,7 +37,7 @@ var Users = mongoose.model('usuario');
         console.log('ERROR: ' + err);
       }
     });
-  };
+  };*/
 
   //POST - Insert a new User in the DB
   exports.addUser = function(req, res) {
